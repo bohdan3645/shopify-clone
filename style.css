@@ -1,0 +1,43 @@
+:root {
+    --primary-color: #0f2d25;
+    --light-font-color: #fdefef;
+    --dark-font-color: #444;
+    --header-content-width: 800px;
+    --form-content-width: 600px;
+    --section-padding: 5%;
+    --form-border-radius: 5px;
+
+    font-size: 14px;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+:focus-visible {
+    outline: 3px solid rgb(105, 168, 128);
+}
+
+body {
+    margin: 0 auto;
+    max-width: 1600px;
+    font-family: ShopifySans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+p {
+    line-height: 1.5;
+}
+
+a {
+    color: inherit;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
