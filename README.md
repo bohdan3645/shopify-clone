@@ -1,1 +1,1 @@
-# shopify-clone
+# Shopify landing page clone
