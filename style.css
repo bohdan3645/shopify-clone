@@ -1,13 +1,15 @@
 :root {
-    --primary-color: #0f2d25;
-    --light-font-color: #fdefef;
-    --dark-font-color: #444;
-    --header-content-width: 800px;
-    --form-content-width: 600px;
+    --primary-clr: #0f2d25;
+    --light-font-clr: #fffafa;
+    --dark-font-clr: #444;
+    --green-btn-clr: #008060;
+    
     --section-padding: 5%;
-    --form-border-radius: 5px;
+    --content-max-width: 800px;
 
-    font-size: 14px;
+    --form-content-width: 800px;
+    --form-border-radius: 5px;
+    --form-border-clr: #6b7177;
 }
 
 *, ::before, ::after {
@@ -19,10 +21,11 @@
 }
 
 body {
-    margin: 0 auto;
-    max-width: 1600px;
+    margin: 0;
+    font-size: 14px;
     font-family: ShopifySans, Helvetica, Arial, sans-serif;
     font-weight: 400;
+    color: var(--dark-font-clr)
 }
 
 h1 {
@@ -40,4 +43,111 @@ a {
 img {
     display: block;
     width: 100%;
+}
+
+/* -----------------Modifiers----------------- */
+
+.dark--background {
+    background-color: var(--primary-clr);
+    color: var(--light-font-clr)
+}
+
+
+/* -----------------Form----------------- */
+
+.form {
+    max-width: var(--form-content-width);
+}
+
+.form__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.form__container > * {
+    flex-grow: 1;
+    border-radius: var(--form-border-radius);
+    height: 50px; 
+}
+
+.form__container input {
+    flex-basis: 350px;
+    min-width: 60%;
+    padding: 0 1rem;
+}
+
+.form__container button {
+    background-color: var(--green-btn-clr);
+    color: var(--light-font-clr);
+    border: none;
+    cursor: pointer;
+    padding: 0 2rem;
+}
+
+.form__container .black--button {
+    background-color: black;
+}
+
+/* -----------------Main----------------- */
+
+.header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__logo {
+    max-width: 120px;
+}
+
+.header__img {
+    background-image: linear-gradient(var(--primary-clr) 45%, white 45%);
+    width: 100%;
+}
+
+.header__img div {
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.perks {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.perks > * {
+    flex-grow: 1;
+    flex-basis: 250px;
+}
+
+.perks__icon {
+    max-width: 45px;
+}
+
+.brands__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.brands__content > * {
+    flex-grow: 1;
+    flex-basis: 125px;
+}
+
+.testimonial {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonial__icon {
+    max-width: 50px;
 }
