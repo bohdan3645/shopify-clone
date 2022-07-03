@@ -77,6 +77,10 @@ img {
     font-size: 1.2rem;
 }
 
+.section {
+    padding-inline: var(--section-padding);
+}
+
 /* -----------------Form----------------- */
 
 .form {
@@ -173,11 +177,11 @@ img {
     max-width: var(--content-max-width-md);
     margin: 0 auto;
     margin-block: var(--section-margin);
-    padding-inline: var(--section-padding);
 }
 
 .perks > * {
     flex-grow: 1;
+    flex-shrink: 2;
     flex-basis: 250px;
 }
 
@@ -208,8 +212,111 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 30px;
 }
 
 .testimonial__icon {
-    max-width: 50px;
+    max-width: 75px;
 }
+
+.testimonial q {
+    font-size: 2.7rem;
+    font-weight: 700;
+}
+
+.testimonial p {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.intermediate {
+    padding-block: 80px;
+}
+
+.fags {
+    margin: 0 auto;
+    margin-block: var(--section-margin);
+    max-width: var(--content-max-width-md);
+}
+
+.fags h2 {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 80px;
+}
+
+.fags label {
+    position: relative;
+    cursor: pointer;
+}
+
+.fags label::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    height: 3px;
+    width: 23px;
+    background-color: var(--dark-font-clr);
+}
+
+.fags label::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 23px;
+    background-color: var(--dark-font-clr);
+}
+
+.fags input[type='checkbox']:checked ~ label::before {
+    width: 0;
+}
+
+.fags input[type='checkbox'] {
+    display: none;
+}
+
+.fag__a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 400ms ease-in-out;
+}
+
+.fags input[type='checkbox']:checked ~ .fag__a {
+    max-height: 1000px;
+}
+
+.footer {
+    margin: 0 auto;
+    padding-top: 80px;
+    max-width: var(--content-max-width-md);
+}
+
+.navigation ul {
+    list-style: none;
+    color: var(--green-btn-clr);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.navigation li {
+    line-height: 1.5;
+}
+
+.navigation a {
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 1200px) {
+    .navigation ul {
+        flex-direction: row;
+        justify-content: end;
+        gap: 30px;
+    }
+}
+
